@@ -1,4 +1,5 @@
-export default cards = [
+
+const cards = [
     {
       icon: "https://neogreens.com/wp-content/uploads/2025/06/Group-4962.svg",
       title: "Feel Foggy or Unfocused?",
@@ -42,3 +43,5 @@ export default cards = [
       mobileImage: "https://neogreens.com/wp-content/uploads/2025/09/Image-6-1.png"
     }
   ];
+
+  export default cards;

@@ -63,7 +63,7 @@
 export default function HeroSection() {
   return (
     <section
-      className="w-full min-h-screen md:h-[85vh] bg-[#2C4143] bg-[url(https://neogreens.com/wp-content/themes/neogreen/assets/img/home/ban-vec.svg)] bg-no-repeat bg-right-bottom bg-contain flex flex-col justify-between md:items-center py-8 md:py-0"
+      className="w-full h-[90vh] bg-[#2C4143] bg-[url(https://neogreens.com/wp-content/themes/neogreen/assets/img/home/ban-vec.svg)] bg-no-repeat bg-right-bottom bg-contain flex flex-col justify-between md:items-center py-8 md:py-0"
       aria-label="Hero — NeoGreens product and benefits"
     >
       <div className="max-w-[1140px] mx-auto px-6 lg:px-0 w-full h-full flex flex-col md:flex-row md:items-center">

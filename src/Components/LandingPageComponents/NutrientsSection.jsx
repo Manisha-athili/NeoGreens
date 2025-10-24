@@ -357,11 +357,11 @@ const columns = [
 
 export default function NutrientsSection() {
   return (
-    <section className="relative py-12 bg-[light-cream] w-full bg-[url(https://neogreens.com/wp-content/themes/neogreen/assets/img/home/ban-vec.svg)] bg-no-repeat bg-right-bottom bg-contain" 
+    <section className="relative py-12 bg-[#fdfcf9]  w-full bg-[url(https://neogreens.com/wp-content/themes/neogreen/assets/img/home/ban-vec.svg)] bg-no-repeat bg-right-bottom bg-contain" 
     aria-labelledby="nutrients-heading">
       <div className="container mx-auto px-4">
         {/* Content Section */}
-        <div className="text-center mb-10 mx-auto">
+        <div className="text-center m-14 mx-auto">
           <div className=" max-w-3xl mx-auto">
             <h2 
               className="text-3xl md:text-4xl font-serif text-primary-teal font-semibold mb-4 font-stretch-ultra-condensed"
@@ -369,12 +369,12 @@ export default function NutrientsSection() {
               One Scoop. 60+ Nutrients. It's That Easy.
             </h2>
 
-            <p className="text-gray-600 mb-6 ">
+            <p className="text-gray-600 mb-6 text-lg ">
               NeoGreens is built to take the confusion out of wellness. You get the essentials – no synthetic ingredients, harsh formulas, or hidden additives. Just smart, science-backed nutrition that respects your time and your trust.
             </p>
 
             <button
-              className="inline-block px-6 py-3 rounded-full border border-emerald-200 text-emerald-700 bg-emerald-50/40 cursor-not-allowed opacity-60"
+              className="inline-block px-6 py-4 rounded-full border border-primary-teal text-primary-teal cursor-not-allowed opacity-60"
               disabled
               aria-label="Product coming soon"
             >
@@ -389,15 +389,18 @@ export default function NutrientsSection() {
             Nutrient Comparison Table
           </h3>
           
-          <div className="overflow-x-auto">
-            <div className="min-w-full bg-transparent">
+          <div className="w-full flex justify-center items-center overflow-hidden">
+            <div className="min-w-full bg-transparent flex flex-col items-center">
               {/* Desktop Layout */}
-              <div className="w-full flex justify-center items-center ">
-              <div className="hidden w-1/3 lg:grid grid-cols-[minmax(12rem,1fr)_repeat(4,minmax(8rem,1fr))] gap-0 border border-gray-200 rounded-lg">
-                
+              <div className="hidden lg:flex justify-center items-start  ">
+
+              <div className="w-1/2 grid grid-cols-[minmax(12rem,1fr)_repeat(4,minmax(8rem,1fr))] 
+                      border border-gray-200 rounded-lg bg-white/50 shadow-sm
+                      ">
+                        
                 {/* Header Row */}
                 <div className="p-4 bg-gray-50 border-b border-r border-gray-200">
-                  <h4 className="text-2xl font-medium text-gray-800"
+                  <h4 className="text-3xl font-medium text-gray-900"
                   style={{ fontFamily: '"Playfair Display", serif' }}
                   >
                     {columns[0].title}
@@ -407,7 +410,7 @@ export default function NutrientsSection() {
                 {columns.slice(1).map((col) => (
                   <div
                     key={col.key}
-                    className={`p-2 border-b border-gray-200 flex items-center justify-center ${col.type === "logo" ?  "bg-primary-teal rounded-t-xl"  :  "bg-gray-50" }`}
+                    className={`p-2 border-b border-gray-200 flex items-center justify-center ${col.type === "logo" ?  "bg-primary-teal rounded-t-xl"  :  "bg-gray-50 rounded-t-xl" }`}
                   >
                     {col.type === "logo" ? (
                       <img
@@ -417,7 +420,7 @@ export default function NutrientsSection() {
                         loading="lazy"
                       />
                     ) : (
-                      <h4 className="text-2xl font-medium text-gray-800 text-center" 
+                      <h4 className="text-2xl font-medium text-gray-800 text-center w-auto " 
                       style={{ fontFamily: '"Playfair Display", serif' }}
                       >
                         {col.title}
@@ -474,10 +477,10 @@ export default function NutrientsSection() {
 
        
               {/* Mobile Layout */}
-              <div className="lg:hidden">
+              <div className="lg:hidden w-full overflow-x-auto mt-6">
                 <div className="flex border border-gray-200 rounded-lg overflow-hidden">
                   {/* Fixed Information Column */}
-                  <div className="flex-shrink-0 bg-white w-48 border-r border-gray-200">
+                  <div className="flex-shrink-0  bg-white w-38 p border-r border-gray-200">
                     {/* Header */}
                     <div className="p-4 bg-gray-50 border-b border-gray-200 h-20 flex items-center ">
                       <h4 className="text-lg font-semibold text-gray-800">
@@ -499,7 +502,7 @@ export default function NutrientsSection() {
                   </div>
 
                   {/* Scrollable Columns */}
-                  <div className="overflow-x-auto flex-1">
+                  <div className="overflow-x-auto  flex-1 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
                     <div className="flex">
                       {columns.slice(1).map((col) => (
                         <div

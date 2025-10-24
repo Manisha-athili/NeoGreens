@@ -1,4 +1,3 @@
-// Footer.jsx
 import React from "react";
 
 const social = [
@@ -33,7 +32,7 @@ const policyLinks = [
   { href: "https://neogreens.com/privacy-policy/", label: "Privacy Policy" },
   { href: "https://neogreens.com/terms-conditions/", label: "Terms & Conditions" },
   { href: "https://neogreens.com/return-policy/", label: "Return Policy" },
-  { href: "https://neogreens.com/shipping-policy/", label: "Shipping policy" },
+  { href: "https://neogreens.com/shipping-policy/", label: "Shipping Policy" },
 ];
 
 export default function Footer({ className = "" }) {
@@ -41,78 +40,84 @@ export default function Footer({ className = "" }) {
 
   return (
     <footer
-      className={`footer_wrapper ${className}`}
-      style={{ background: "#2c4143" }}
+      className={`w-full bg-[#2c4143] ${className}`}
       aria-label="Site footer"
     >
-      <div className="container mx-auto px-4 py-10">
+      <div className="max-w-[1140px] mx-auto px-4 md:px-6 lg:px-0 py-10">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Logo + Main Links */}
-          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-            <a
-              href="https://neogreens.com"
-              className="flex items-center"
-              aria-label="NeoGreens home"
-            >
-              <img
-                src="https://neogreens.com/wp-content/uploads/2025/06/neogreens-logo.svg"
-                alt="NeoGreens logo"
-                className="h-8 md:h-10"
-                loading="lazy"
-              />
-            </a>
-
-            <ul className="footer_list flex flex-wrap gap-4">
+        <div>
+          <div className="flex flex-row md:flex-row md:items-center gap-6 md:gap-10">
+            <div>
+              <a
+                href="https://neogreens.com"
+                className="flex items-center"
+                aria-label="NeoGreens home"
+              >
+                <img
+                  src="https://neogreens.com/wp-content/uploads/2025/06/neogreens-logo.svg"
+                  alt="NeoGreens logo"
+                  className="h-6 md:h-8"
+                  loading="lazy"
+                />
+              </a>
+            </div>
+          </div>
+          {/* Social icons below logo and links */}
+          <div className="mt-6">
+            <ul className="flex items-center gap-4">
+              {social.map((s) => (
+                <li key={s.href}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center p-1 hover:opacity-90"
+                    aria-label={s.alt}
+                  >
+                    <img
+                      src={s.img}
+                      alt={s.alt}
+                      className="h-6 w-6"
+                      loading="lazy"
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+          <div>
+             <ul className="flex flex-wrap gap-4">
               {links.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-sm text-gray-200 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-emerald-500 rounded"
+                    className="text-lg text-[#efecd6] hover:text-white transition"
                   >
                     {l.label}
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Social icons */}
-          <ul className="social_list flex items-center gap-4">
-            {social.map((s) => (
-              <li key={s.href}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center p-1 rounded hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-emerald-400"
-                  aria-label={s.alt}
-                >
-                  <img
-                    src={s.img}
-                    alt={s.alt}
-                    className="h-6 w-6"
-                    loading="lazy"
-                    width="24"
-                    height="24"
-                  />
-                </a>
-              </li>
-            ))}
-          </ul>
+
+          </div>
+            
         </div>
 
-        {/* Copyright + policy links */}
-        <div className="copy_right_wrap mt-8 border-t border-white/10 pt-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-          <div className="text-sm text-gray-200">
-            <span>Copyright {year} © NeoGreen. All rights Reserved</span>
+        {/* Copyright + Policy */}
+        <div className="mt-8 border-t border-white/10 pt-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+          <div className="text-medium text-[#efecd6]">
+            Copyright {year} © NeoGreen. All rights Reserved
           </div>
 
-          <ul className="copy_right_list flex flex-wrap gap-4">
+          <ul className="flex flex-wrap gap-4">
             {policyLinks.map((p) => (
               <li key={p.href}>
                 <a
                   href={p.href}
-                  className="text-sm text-gray-300 hover:text-white transition focus:outline-none focus:ring-2 focus:ring-emerald-400 rounded"
+                  className="text-medium text-[#efecd6] hover:text-white transition"
                 >
                   {p.label}
                 </a>
