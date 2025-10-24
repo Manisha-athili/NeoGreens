@@ -66,25 +66,3 @@ function Navbar() {
 
 export default Navbar;
 
-
-// import React from 'react';
-
-// function Navbar() {
-//   return (
-//     <div className="bg-primary-teal text-white font-sans">
-//         <header className="bg-primary-teal py-2 px-4 flex justify-between items-center fixed w-full z-10">
-//         {/* <div className="text-xl md:text-2xl font-light text-gray-200"></div>
-//          */}
-//          <img src="https://neogreens.com/wp-content/uploads/2025/06/neogreens-logo.svg" alt="" />
-         
-//         <nav className="flex space-x-6 md:space-x-8">
-//           <a href="#" className="text-sm md:text-base hover:text-teal-300">About Us</a>
-//           <a href="#" className="text-sm md:text-base hover:text-teal-300">Contact Us</a>
-//           <a href="#" className="bg-primary-teal text-light-green border border-light-green font-semibold py-4 px-6 md:py-4 md:px-6 rounded-full text-xs md:text-sm">Coming Soon</a>
-//         </nav>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default Navbar;

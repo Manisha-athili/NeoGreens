@@ -108,7 +108,7 @@ export default function Footer({ className = "" }) {
 
         {/* Copyright + Policy */}
         <div className="mt-8 border-t border-white/10 pt-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-          <div className="text-medium text-[#efecd6]">
+          <div className="text-medium text-[#efecd6] mx-2">
             Copyright {year} © NeoGreen. All rights Reserved
           </div>
 
@@ -117,7 +117,7 @@ export default function Footer({ className = "" }) {
               <li key={p.href}>
                 <a
                   href={p.href}
-                  className="text-medium text-[#efecd6] hover:text-white transition"
+                  className="text-medium text-[#efecd6] hover:text-white m-3 transition"
                 >
                   {p.label}
                 </a>
