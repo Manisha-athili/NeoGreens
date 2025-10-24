@@ -83,7 +83,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="testimonials_section relative py-16 lg:py-28 overflow-hidden">
+    <section className="mt-2  relative py-16 lg:py-28 overflow-hidden">
       <div className="mx-auto px-4 relative">
         <div className="text-center max-w-3xl mx-auto mb-8">
           <h3 className="text-3xl md:text-4xl font-serif text-primary-teal font-semibold font-stretch-ultra-condensed">
@@ -96,7 +96,7 @@ export default function Testimonials() {
           <button
             aria-label="Previous testimonials"
             onClick={() => scrollBy("prev")}
-            className="p-2 rounded-full bg-white shadow hover:shadow-md disabled:opacity-50 z-10"
+            className="opacity-0 md:opacity-100 p-2 rounded-full bg-white shadow hover:shadow-md disabled:opacity-50 z-10"
           >
             <svg className="w-5 h-5 text-emerald-800" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M15 18l-6-6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -113,7 +113,7 @@ export default function Testimonials() {
               {testimonials.map((t, idx) => (
                 <article
                   key={t.id}
-                  className="testimonial-card flex-shrink-0 w-58 md:w-58 lg:w-58 h-100 md:h-[32rem] bg-white rounded-xl border border-[#e6e6e6] cursor-pointer p-6 shadow-md m-3 flex flex-col justify-between"
+                  className="flex-shrink-0 w-58 md:w-58 lg:w-58 h-100 md:h-[32rem] bg-white rounded-xl border border-[#e6e6e6] cursor-pointer p-6 shadow-md m-3 flex flex-col justify-between"
                   style={{ scrollSnapAlign: "center" }}
                   onClick={() => t.videoId && setModalVideoId(t.videoId)}
                 >
@@ -143,7 +143,7 @@ export default function Testimonials() {
           <button
             aria-label="Next testimonials"
             onClick={() => scrollBy("next")}
-            className="p-2 rounded-full bg-white shadow hover:shadow-md disabled:opacity-50 z-10"
+            className=" opacity-0 md:opacity-100 p-2 rounded-full bg-white shadow hover:shadow-md disabled:opacity-50 z-10"
           >
             <svg className="w-5 h-5 text-emerald-800" viewBox="0 0 24 24" fill="none" stroke="currentColor">
               <path d="M9 18l6-6-6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

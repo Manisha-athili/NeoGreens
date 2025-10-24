@@ -31,11 +31,11 @@ export default function ReadySection({
               <a
                 href={ctaEnabled ? ctaHref : "#"}
                 onClick={(e) => !ctaEnabled && e.preventDefault()}
-                className={`inline-flex items-center justify-center px-8 py-4 border border-[#2c4143] rounded-full font-semibold text-gray-700 transition-all duration-300
+                className={`inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 border border-[#2c4143] rounded-full font-semibold text-gray-700 transition-all duration-300 text-sm sm:text-base mb-10
                   ${
                     ctaEnabled
                       ? "bg-[#fdfcf9] hover:bg-white hover:shadow-md"
-                      : "bg-[#fdfcf9]/80 opacity-60 cursor-pointer mb-10"
+                      : "bg-[#fdfcf9]/80 opacity-60 cursor-not-allowed"
                   }`}
                 aria-disabled={!ctaEnabled}
               >
@@ -45,13 +45,13 @@ export default function ReadySection({
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className=" relative w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <div className="hidden md:flex  relative w-full lg:w-1/2  justify-center lg:justify-end">
             <div className="relative max-w-xs md:max-w-sm w-full h-full  ">
               <img
                 src={imgSrc}
                 alt="NeoGreens product"
                 loading="lazy"
-                className="absolute z-100 bottom-[-100px] h-[45vh] w-full "
+                className="absolute z-100 lg:bottom-[-100px] h-[45vh] w-full "
               />
             </div>
           </div>
