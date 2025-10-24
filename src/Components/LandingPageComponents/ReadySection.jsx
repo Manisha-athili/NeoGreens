@@ -1,20 +1,5 @@
 import React from "react";
 
-/**
- * ReadySection.jsx
- *
- * Simple responsive section:
- * - Left: heading, paragraph, disabled CTA
- * - Right: image
- *
- * Props:
- *  - ctaHref (string) optional: href for CTA (defaults to '#')
- *  - ctaEnabled (bool) optional: if true CTA is clickable (default false)
- *  - imgSrc (string) optional: image url (default = provided URL)
- *  - className (string) optional: extra classes for root section
- *
- * Requires Tailwind CSS.
- */
 
 export default function ReadySection({
   ctaHref = "https://neogreens.com/product-page/",
@@ -24,7 +9,7 @@ export default function ReadySection({
 }) {
   return (
     <section
-      className={`ready_section py-10 md:py-14 ${className}`}
+      className={`py-10 md:py-14 ${className}`}
       style={{ background: "#efecd6" }}
       aria-label="When you are ready section"
     >
@@ -32,7 +17,7 @@ export default function ReadySection({
         <div className="flex flex-col lg:flex-row items-center gap-8">
           {/* LEFT */}
           <div className="w-full lg:w-1/2">
-            <div className="ready_content_wrap max-w-xl">
+            <div className="max-w-xl">
               <h2 className="text-2xl md:text-3xl font-serif text-emerald-900 mb-3">
                 When You’re Ready, NeoGreens is Here.
               </h2>
@@ -61,7 +46,7 @@ export default function ReadySection({
 
           {/* RIGHT */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end bg-[url(https://neogreens.com/wp-content/themes/neogreen/assets/img/home/ready-vec.svg)] bg-no-repeat bg-left-bottom bg-contain">
-            <div className="ready_img_wrap max-w-sm w-full">
+            <div className="max-w-sm w-full">
               <img
                 src={imgSrc}
                 alt="NeoGreens product"
