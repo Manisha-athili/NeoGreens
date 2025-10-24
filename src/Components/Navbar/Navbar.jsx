@@ -9,8 +9,8 @@ function Navbar() {
   };
 
   return (
-    <header className="fixed w-full z-[2000] top-0 border-b border-border-cream bg-[#2C4143] py-2 border-opacity-60">
-      <nav className="flex items-center justify-between max-w-[1140px] mx-auto px-4 lg:px-0 m-2">
+    <header className="fixed w-full z-[2000] top-0 border-b border-border-cream bg-[#2C4143] py-3 border-opacity-60">
+      <nav className="flex items-center justify-between max-w-[1140px] mx-auto px-4 lg:px-0">
         <Link to="/" className="flex-shrink-0">
           <img 
             src="https://neogreens.com/wp-content/uploads/2025/06/neogreens-logo.svg" 
@@ -32,7 +32,7 @@ function Navbar() {
         </button>
 
         <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:flex items-center absolute lg:relative top-full left-0 w-full lg:w-auto bg-[#2C4143] lg:bg-transparent`}>
-          <ul className="flex flex-col lg:flex-row items-center gap-8 p-4 lg:p-0">
+          <ul className="flex flex-col lg:flex-row items-center gap-8 p-4 lg:p-0 text-center lg:text-left w-full lg:w-auto">
             <li>
               <Link 
                 to="/about" 
@@ -52,7 +52,7 @@ function Navbar() {
             <li>
               <Link 
                 to="/products" 
-                className="text-border-cream text-lg font-medium border rounded-full border-border-cream px-5 py-3 hover:bg-[rgba(239,236,214,0.1)] border-opacity-50 block"
+                className="text-border-cream text-lg font-medium border rounded-full border-border-cream px-5 py-4 hover:bg-[rgba(239,236,214,0.1)] border-opacity-20 block opacity-30"
               >
                 Coming Soon
               </Link>

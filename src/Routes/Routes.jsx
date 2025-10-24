@@ -10,9 +10,8 @@ const Routes = () => {
     <Suspense fallback={<div>Loading...</div>}>
       <RouterRoutes>
          <Route path="/" element={<LandingPage />} />
-        {/* Add more routes here */}
+       
 {/*      
-<Route path="/about" element={<About />} /> 
  <Route path="/about" element={<AboutPage />} />
   <Route path="/contact" element={<ContactPage />} />
   <Route path="/products" element={<ProductsPage />} />
